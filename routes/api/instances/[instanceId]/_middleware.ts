@@ -1,3 +1,4 @@
+// Ensures a valid instance is provided and provides the associated api key
 import { FreshContext } from "fresh";
 import { Instance, instances } from "../index.tsx";
 
@@ -16,7 +17,7 @@ export async function handler(
   const item = getInstance(id);
 
   if (item === null) {
-    throw new Deno.errors.NotFound("Instance not found [middleware]");
+    throw new Deno.errors.NotFound("Instance not found");
   }
 
   ctx.state.instance = item;

@@ -54,6 +54,8 @@ export interface Relationships {
   };
 }
 
+type EggFeature = "eula" | "java_version" | "gsl_token" | "pid_limit" | "steam_disk_space";
+
 export interface ServerAttributes {
   server_owner: boolean;
   identifier: string;
@@ -67,7 +69,7 @@ export interface ServerAttributes {
   limits: Limits;
   invocation: string;
   docker_image: string;
-  egg_features: string[];
+  egg_features: EggFeature[]; // eula, java_version, gsl_token, pid_limit, steam_disk_space
   feature_limits: FeatureLimits;
   status: null;
   is_suspended: boolean;
