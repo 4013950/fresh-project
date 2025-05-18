@@ -15,3 +15,6 @@ deno task dev
 ```
 
 This will watch the project directory and restart as necessary.
+
+
+Uses the Fresh 2 alpha, just a proof of concept showing deno compile for a full web app.
