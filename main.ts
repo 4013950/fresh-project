@@ -13,7 +13,7 @@ app.get("/api2/:name", (ctx) => {
     `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}!`,
   );
 });
-
+1
 // this can also be defined via a file. feel free to delete this!
 const exampleLoggerMiddleware = define.middleware((ctx) => {
   console.log(`${ctx.req.method} ${ctx.req.url}`);
@@ -28,4 +28,8 @@ await fsRoutes(app, {
 
 if (import.meta.main) {
   await app.listen();
+}
+
+if (Deno.build.standalone) {
+  console.log('compiled version')
 }
